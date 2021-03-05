@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo event</title>
+</head>
+<body>
+<h1 id="over" align="center" onmouseover="mouseover();" onmouseout="mouseout();" >This is onmouseover and onmouseout event</h1>
+
+
+</body>
+<script>
+    function mouseover() {
+        document.getElementById("over").style.color="red";
+    }
+    function mouseout() {
+        document.getElementById("over").style.color="black";
+    }
+</script>
+</html>
