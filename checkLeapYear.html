@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Leap Year</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let year = parseInt(prompt("Enter the year:"));
+    let checkLeapYear = false;
+
+    if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
+        alert( year + " is leap year");
+    }
+    else{
+        alert(year + " is not leap year");
+    }
+
+</script>
