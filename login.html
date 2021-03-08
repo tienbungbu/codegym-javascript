@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>check login</title>
+</head>
+<body>
+
+</body>
+<script>
+    let idName = prompt("Enter the id name:");
+    let password = prompt("Enter the password:");
+
+    if(idName == "Admin"){
+        if(password == "TheMaster"){
+            alert("Welcome");
+        }
+        else if(password == null){
+            alert("Canceled")
+        }
+        else{
+            alert("Wrong password")
+        }
+    }
+    else if(idName == null){
+        alert("Canceled");
+         }
+         else{
+        alert("i don't know you");
+        }
+</script>
+</html>
