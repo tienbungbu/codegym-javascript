@@ -18,17 +18,19 @@
             <th>To Currency</th>
         </tr>
         <tr>
-            <td ><input type="number" name="" id="inputAmount" ></td>
+            <td ><input type="number" name="" id="1" ></td>
             <td>
-                <select name="" id="1">
-                    <option value="">VietNam</option>
-                    <option value="">USD</option>
+                <select name="" id="2">
+                    <option value="23000">VietNam</option>
+                    <option value="1">USD</option>
+                    <option value="10000">Thái</option>
                 </select>
             </td>
             <td>
-                <select name="" id="2">
-                    <option value="23000">USD</option>
-                    <option value="1">VietNam</option>
+                <select name="" id="3">
+                    <option value="1">USD</option>
+                    <option value="23000">VietNam</option>
+                    <option value="10000">Thái</option>
                 </select>
             </td>
             <td>
@@ -45,9 +47,10 @@
 </body>
 <script>
     function convert() {
-        let a = document.getElementById("inputAmount").value;
+        let a = document.getElementById("1").value;
         let b = document.getElementById("2").value;
-        let result = a * b;
+        let c = document.getElementById("3").value;
+        let result = (a * c)/b;
         document.getElementById('showResult').innerText = "Result:" +result;
     }
 </script>
