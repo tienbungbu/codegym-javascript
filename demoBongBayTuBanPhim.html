@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Balloon</title>
+</head>
+<body onload="docReady()">
+<img id="balloon" style="width: 10%;position: absolute;top: 210px;left: 500px" src="image/bongbay.jpg" alt="">
+
+</body>
+</html>
+<script>
+    function upArrowPressed() {
+        var element = document.getElementById('balloon');
+        element.style.top = parseInt(element.style.top) - 10 + 'px';
+    }
+    function downArrowPressed() {
+        var element = document.getElementById('balloon');
+        element.style.top = parseInt(element.style.top) + 10 + 'px';
+    }
+    function leftArrowPressed() {
+        var element = document.getElementById('balloon');
+        element.style.left = parseInt(element.style.left) - 10 + 'px';
+    }
+    function rightArrowPressed() {
+        var element = document.getElementById('balloon');
+        element.style.left = parseInt(element.style.left) + 10 + 'px';
+    }
+    function moveBalloon(event) {
+        switch (event.keyCode) {
+            case 37:
+                leftArrowPressed();
+                break;
+            case 38:
+                upArrowPressed();
+                break;
+            case 39:
+                rightArrowPressed();
+                break;
+            case 40:
+                downArrowPressed();
+                break;            
+        }
+    }
+    
+    function docReady() {
+        window.addEventListener('keydown',moveBalloon);
+    }
+</script>
