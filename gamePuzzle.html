@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game puzzle</title>
+    <style>
+        .btn{
+            margin-left: 30%;
+            /*position: relative;*/
+        }
+    </style>
+</head>
+<body>
+<!--nobita-->
+<img class="btn" id="nobita1" src="image/nobita1.jpg" onclick="nextImg1()" alt="" style="width:300px;height: 100px">
+<img class="btn" id="nobita2" src="image/nobita2.jpg" onclick="nextImg2()" alt="" style="width:300px;height: 100px">
+<img class="btn" id="xuka3" src="image/xuka3.jpg" onclick="nextImg3()" alt="" style="width:300px;height: 100px">
+
+
+<!--xuka-->
+<img class="btn" id="xuka1" src="image/xuka1.jpg" alt="" style="width:300px;height: 100px" hidden>
+<img class="btn" id="xuka2" src="image/xuka2.jpg" alt="" style="width:300px;height: 100px" hidden>
+<img class="btn" id="nobita3" src="image/nobita3.jpg" alt="" style="width:300px;height: 100px" hidden>
+
+</body>
+</html>
+<script>
+    var count = 0;
+    var checkNobita1 = document.getElementById('nobita1').src = 'image/nobita1.jpg';
+    var checkNobita2 = document.getElementById('nobita2').src = 'image/nobita2.jpg';
+    var checkNobita3 = document.getElementById('nobita3').src = 'image/nobita3.jpg';
+    function nextImg1() {
+        if(count==0){
+            document.getElementById('nobita1').src = 'image/xuka1.jpg';
+            count++;
+        }
+        else if(count==1){
+            document.getElementById('nobita1').src = 'image/nobita1.jpg';
+            count--;
+        }
+    }
+    function nextImg2() {
+        if(count==0){
+            document.getElementById('nobita2').src = 'image/xuka2.jpg';
+            count++;
+        }
+        else if(count==1){
+            document.getElementById('nobita2').src = 'image/nobita2.jpg';
+            count--;
+        }
+    }
+    function nextImg3() {
+        if(count==0){
+            document.getElementById('xuka3').src = 'image/nobita3.jpg';
+            count++;
+        }
+        else if(count==1){
+            document.getElementById('xuka3').src = 'image/xuka3.jpg';
+            count--;
+        }
+    }
+    function check() {
+        if(checkNobita1 && checkNobita2 && checkNobita3){
+            alert('Wwowww Congratolation');
+        }
+    }
+</script>
